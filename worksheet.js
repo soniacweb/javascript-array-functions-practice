@@ -45,15 +45,36 @@ console.log(firstNames);
 
 //***REDUCE***
 //1. Get total mass of all characters
+const massSum = characters.reduce((a,b) => {return a + b.mass}, 0)
+console.log(massSum)
+
 //2. Get total height of all characters
+
+const heightSum = characters.reduce((x,y) => {return x + y.height}, 0)
+console.log(heightSum);
+
 //3. Get total number of characters by eye color
+
 //4. Get total number of characters in all the character names
+
+
 
 //***FILTER***
 //1. Get characters with mass greater than 100
+
+const greaterThan100 = characters.filter(character => character.mass > 100)
+console.log('greater', greaterThan100);
 //2. Get characters with height less than 200
+const heightLessThan200 = characters.filter(character => character.height < 200)
+console.log('less than', heightLessThan200);
+
 //3. Get all male characters
+const males = characters.filter(character => character.gender === 'male')
+console.log(males);
+
 //4. Get all female characters
+const females = characters.filter(character => character.gender === 'female')
+console.log(females);
 
 //***SORT***
 //1. Sort by mass
