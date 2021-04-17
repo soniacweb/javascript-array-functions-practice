@@ -78,18 +78,52 @@ console.log(females);
 
 //***SORT***
 //1. Sort by mass
+
+const massSorting = characters.sort((a, b) => a.mass - b.mass)
+console.log('sorting', massSorting);
+
 //2. Sort by height
+const heightSorting = characters.sort((a, b) => a.height - b.height)
+console.log('heigt sorting', heightSorting);
 //3. Sort by name
+// nested ternary
+const nameSorting = characters.sort((a, b) => a.name !== b.name ? a.name < b.name ? -1:1:0)
+console.log('name sorting', nameSorting);
 //4. Sort by gender
+const genderSorting = characters.sort((a, b) =>  a.gender < b.gender ? -1:1)
+console.log('gender sorting', genderSorting);
 
 //***EVERY***
 //1. Does every character have blue eyes?
+const blueEyes = characters.every(character => character.eye_color === 'blue')
+console.log(blueEyes);
+
 //2. Does every character have mass more than 40?
+const massCheck = characters.every(character => character.mass > 40)
+console.log(massCheck);
+
 //3. Is every character shorter than 200?
+const heightCheck = characters.every(character => character.height < 200)
+console.log(heightCheck);
+
 //4. Is every character male?
+const genderCheck = characters.every(character => character.gender === 'male')
+console.log(genderCheck);
 
 //***SOME***
 //1. Is there at least one male character?
+
+const maleChar = characters.some(character => character.gender == 'male')
+console.log('male?', maleChar);
+
 //2. Is there at least one character with blue eyes?
+const oneBlueEyes = characters.some(character => character.eye_color == 'blue')
+console.log('blueEyes?', oneBlueEyes);
+
 //3. Is there at least one character taller than 210?
+const tallerthan210 = characters.some(character => character.height > 210)
+console.log(tallerthan210);
+
 //4. Is there at least one character that has mass less than 50?
+const masslessthan50 = characters.some(character => character.mass < 50)
+console.log(masslessthan50);
